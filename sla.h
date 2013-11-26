@@ -100,6 +100,9 @@ class Vector3 {
     template <typename U>
         friend inline U dot(const Vector3<U>& v0, const Vector3<U>& v1);
     
+    template <typename U>
+        friend inline U sum(const Vector3<U>& v0);
+    
     // zero vector
     static inline Vector3 zero() {
         return Vector3(0.0,0.0,0.0);
@@ -127,6 +130,11 @@ inline Vector3<T> operator* (const T s, const Vector3<T>& v) {
 template <typename T>
 inline T dot(const Vector3<T>& v0, const Vector3<T>& v1) {
     return v3::dot(v0.val,v1.val);
+}
+
+template <typename T>
+inline T sum(const Vector3<T>& v0) {
+    return v3::sum(v0.val);
 }
 
 template <typename T>

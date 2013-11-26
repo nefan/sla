@@ -103,6 +103,11 @@ inline T dot(const Container<T> v0, const Container<T> v1) {
 }
 
 template <typename T>
+inline T sum(const Container<T> v0) {
+    return v0.v[0]+v0.v[1]+v0.v[2];
+}
+
+template <typename T>
 inline Container<T> getContainer(T x0, T x1, T x2) {
     Container<T> res;
     res.v[0] = x0;
